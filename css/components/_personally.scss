@@ -1,0 +1,125 @@
+.personally {
+	background: url('../img/world-map.svg') 50% 50% no-repeat;
+	background-size: cover;
+	padding: 120px 0;
+
+	&__h-left {
+		h1 {
+			color: #fd5c08;
+			font-size: 4rem;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		h3 {
+			color: #3f3e41;
+			font-size: 2.1rem;
+			text-transform: uppercase;
+			margin: 0;
+		}
+	}
+	p {
+		font-size: 1.1875rem;
+		width: 45%;
+	}
+
+	&__galery {
+		width: 100%;
+		display: flex;
+		margin-top: 115px;
+
+		&-item {
+			width: 33.3333333333%;
+			height: auto;
+			background-position: 50% 50%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			overflow: hidden;
+
+			&:first-child {
+				background-image: url('../img/img.jpg');
+			}
+			&:nth-child(2) {
+				background-image: url('../img/img2.jpg');
+			}
+			&:nth-child(3) {
+				background-image: url('../img/img3.jpg');
+			}
+
+			.galery__item-disp {
+				color: #fff;
+				padding: 35px;
+				p {
+					font-size: 1rem;
+					margin: 0;
+					text-transform: uppercase;
+					font-weight: 300;
+				}
+				span.price {
+					font-size: 2.625rem;
+					font-weight: 900;
+					margin: 0;
+
+					svg {
+						margin-right: 6px;
+					}
+				}
+			}
+
+			.galery__item-demo {
+				background: rgba(255, 255, 255, 0.7);
+				padding: 30px 30px;
+				margin-top: 50px;
+				position: relative;
+				transform: translateY(100%);
+				transition: all 0.5s ease-in-out;
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: -10px;
+					left: 40px;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 14px 10px 14px;
+					border-color: transparent transparent rgba(255, 255, 255, 0.7) transparent;
+					transform: translateY(100%);
+					transition: all 0.3s ease;
+				}
+
+				h4 {
+					font-size: 1.4375rem;
+					color: #fd5c08;
+					text-transform: uppercase;
+					margin: 0;
+					font-weight: 400;
+					margin-bottom: 3px;
+				}
+				h3 {
+					font-size: 2.125rem;
+					color: #3f3e41;
+					margin: 0;
+					text-transform: uppercase;
+					font-weight: 700;
+					margin-bottom: 30px;
+					line-height: 1.1364em;
+				}
+				a {
+					font-size: 0.875rem;
+					color: #3f3e41;
+					text-decoration: none;
+					text-transform: uppercase;
+				}
+			}
+
+			&:hover .galery__item-demo {
+				transform: translateY(0);
+
+				&:after {
+					transform: translateY(0);
+					
+				}
+			}
+		}
+	}
+}
